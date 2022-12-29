@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(media/background.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+.name {
+    margin: 1.5em 0 1.5em 0;
+    width: 90%;
+    max-width: 438px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 2em;
+    width: 90%;
+    max-width: 670px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}
+#profileImage {
+    margin-top: 3em;
+    width: 29%;
+    border: 0;
+    border-radius: 50%;
+}
+.icons {
+    width: 9em;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.4em;
+}
+.icons a {
+    transition-duration: 0.5s;
+}
+.icons a:hover {
+    transform: scale(1.2);
+}
+svg {
+    color: white;
+    width: 2em;
+    height: 2em;
+}
+.linkGroup {
+    width: 90%;
+    max-width: 670px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    overflow: hidden;
+}
+.linkCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
+    width: 100%;
+    max-width: 100%;
+    transition-duration: 0.5s;
+}
+.linkCard:focus {
+    transform: scale(0.9);
+}
+.linkItem {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 100%;
+}
+.linkImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.linkTitle {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
