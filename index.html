@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); </style>
-    <meta property=’og:title’ content='Lorenzo Giovanni Vecchio'/>
-    <meta property=’og:image’ content='https://lorenzovecchio.dev/media/profile.jpg’/>
-    <meta property=’og:description’ content='A collection of links to my socials and articles!'/>
-    <meta property=’og:url’ content='https://lorenzovecchio.dev'/>
-    <meta property='og:image:width' content='828' />
-    <meta property='og:image:height' content='828' />
-    <meta property="og:type" content='website'/>
     <link rel="stylesheet" href="style.css">
     <title>Lorenzo Giovanni Vecchio</title>
 </head>
 <body>
+    <h1 class="alert" id="linkCopied">Link Copied!</h1>
+    <h1 class="alert" id="linkNotCopied">A problem occurred, link not copied!</h1>
     <div class="name">
         <img src="media/profile.jpg" alt="profile image" id="profileImage">
         <h1>Lorenzo Vecchio</h1>
+        <button onclick="shareLink()" id="shareButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+        </button>
     </div>
     <div class="icons">
         <a href="https://twitter.com/LRNZGVNV"><svg class="iconsSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" stroke="currentColor"></path></svg></a>
@@ -93,5 +91,25 @@
             </div>
         </a>
     </div>
+    <script>
+        function shareLink() {
+            navigator.clipboard.writeText("https://lorenzovecchio.dev")
+            .then(() => {
+                document.getElementById("linkCopied").style.display = "flex";
+                setTimeout(function()
+                {
+                    document.getElementById("linkCopied").style.display = "none";
+                }, 2000);
+              })
+              .catch(() => {
+                document.getElementById("linkNotCopied").style.display = "flex";
+                setTimeout(function()
+                {
+                    document.getElementById("linkNotCopied").style.display = "none";
+                }, 2000);
+              });
+        }
+        
+    </script>
 </body>
 </html>
