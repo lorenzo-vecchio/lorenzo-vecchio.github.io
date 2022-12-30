@@ -104,6 +104,7 @@ h2 {
     display: flex;
     justify-content: space-around;
     margin: 0.4em;
+    z-index: 1;
 }
 .icons a {
     transition-duration: 0.5s;
