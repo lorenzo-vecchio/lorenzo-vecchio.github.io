@@ -137,8 +137,8 @@ a:active {
     text-decoration: none;
 }
 #shareButton {
-    height: 2.5em;
-    width: 2.5em;
+    height: 3em;
+    width: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,8 +150,8 @@ a:active {
     -webkit-backdrop-filter: blur(5.4px);
     overflow: hidden;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 6px;
+    right: 6px;
 }
 .alert{
     font-size: small;
