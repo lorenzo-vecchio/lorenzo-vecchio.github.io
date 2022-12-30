@@ -30,6 +30,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-shadow: 4px 4px 13px rgba(0,0,0,0.94);
 }
 h2 {
     color: white;
@@ -49,6 +50,7 @@ h2 {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(5.4px);
     -webkit-backdrop-filter: blur(5.4px);
+    text-shadow: 4px 4px 13px rgba(0,0,0,0.94);
 }
 #profileImage {
     margin-top: 3em;
@@ -120,6 +122,7 @@ svg {
     text-align: center;
     color: white;
     text-decoration: none;
+    text-shadow: 4px 4px 13px rgba(0,0,0,0.94);
 }
 a:link {
     text-decoration: none;
@@ -132,6 +135,39 @@ a:hover {
 }
 a:active {
     text-decoration: none;
+}
+#shareButton {
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.alert{
+    font-size: small;
+    width: 60%;
+    height: 2em;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    position: fixed;
+    top: 10px;
+    z-index: 2;
 }
 @media all and (max-width:1024px) {
     selector:after {
