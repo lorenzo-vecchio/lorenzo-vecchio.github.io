@@ -170,7 +170,7 @@ a:active {
     z-index: 2;
 }
 @media all and (max-width:1024px) {
-    selector:after {
+    body:after {
         content: '';
         width: 100%;
         height: 100%;
