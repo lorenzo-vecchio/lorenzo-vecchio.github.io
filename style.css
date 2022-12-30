@@ -21,6 +21,7 @@ body {
     align-items: center;
     justify-content: center;
     transform: rotate(-20deg);
+    z-index: -1;
 }
 .color {
     height: 3.1em;
