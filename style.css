@@ -8,20 +8,47 @@ body {
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
 }
-.background {
-    width: 100%;
+.container {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    background-color: black;
-    background-image: url(media/background.webp);
-    background-repeat: no-repeat;
+    width: 100%;
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-20deg);
+}
+.color {
+    height: 3.1em;
+    width: 1vh;
+}
+.color:nth-of-type(1) {
+    background-color: #76c15d;
+    width: 200%;
+}
+.color:nth-of-type(2) {
+    background-color: #f9c24a;
+    width: 200%;
+}
+.color:nth-of-type(3) {
+    background-color: #f6933c;
+    width: 200%;
+}
+.color:nth-of-type(4) {
+    background-color: #e45251;
+    width: 200%;
+}
+.color:nth-of-type(5) {
+    background-color: #a657a6;
+    width: 200%;
+}
+.color:nth-of-type(6) {
+    background-color: #28afe4;
+    width: 200%;
 }
 .name {
     margin: 1.5em 0 1.5em 0;
