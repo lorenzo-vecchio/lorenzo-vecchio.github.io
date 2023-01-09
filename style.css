@@ -17,7 +17,6 @@ body {
 }
 .color {
     height: 3.1em;
-    width: 1vh;
     width: 200%;
 }
 .color:nth-of-type(1) {
