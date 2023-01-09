@@ -21,7 +21,6 @@ body {
     align-items: center;
     justify-content: center;
     transform: rotate(-20deg);
-    transform: scale(1.0);
     z-index: -1;
 }
 .color {
