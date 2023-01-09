@@ -18,30 +18,25 @@ body {
 .color {
     height: 3.1em;
     width: 1vh;
+    width: 200%;
 }
 .color:nth-of-type(1) {
     background-color: #76c15d;
-    width: 200%;
 }
 .color:nth-of-type(2) {
     background-color: #f9c24a;
-    width: 200%;
 }
 .color:nth-of-type(3) {
     background-color: #f6933c;
-    width: 200%;
 }
 .color:nth-of-type(4) {
     background-color: #e45251;
-    width: 200%;
 }
 .color:nth-of-type(5) {
     background-color: #a657a6;
-    width: 200%;
 }
 .color:nth-of-type(6) {
     background-color: #28afe4;
-    width: 200%;
 }
 .name {
     margin: 1.5em 0 1.5em 0;
