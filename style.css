@@ -6,6 +6,7 @@ body {
     background-color: black;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .container {
     top: calc(50% - 9.3em);
