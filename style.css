@@ -9,7 +9,7 @@ body {
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .container {
-    top: calc(50% - 9.3em);
+    top: 18.6em;
     width: 200%;
     position: fixed;
     transform: rotate(-20deg);
