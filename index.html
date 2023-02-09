@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1M3R3FM28"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-B1M3R3FM28');
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,9 +37,12 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
         </button>
     </div>
-    <h2>Articles</h2>
+    <div class="titleGroup">
+        <h2 onclick="selectArticles()" id="articlesButton">Articles</h2>
+        <h2 onclick="selectSocial()" id="socialButton">Social</h2>
+    </div>
     
-    <div class="linkGroup">
+    <div class="linkGroup" id="articles">
         <a class="linkCard" href="https://medium.com/@lorenzo.vecchio/an-introduction-to-version-control-with-git-4adc19e5a26e">
             <div class="linkItem">
                 <div class="linkImg">
@@ -100,8 +94,9 @@
             </div>
         </a>
     </div>
-    <h2>Social</h2>
-    <div class="linkGroup">
+
+
+    <div class="linkGroup" id="social">
         <a class="linkCard" href="https://www.linkedin.com/in/lorenzo-giovanni-vecchio-52b259240">
             <div class="linkItem">
                 <div class="linkImg">
@@ -143,6 +138,8 @@
             </div>
         </a>
     </div>
+    <div class="space"></div>
+
     <script>
         function shareLink() {
             navigator.clipboard.writeText("https://lorenzovecchio.dev")
@@ -161,7 +158,26 @@
                 }, 2000);
               });
         }
-        
+        function selectArticles() {
+            document.getElementById("articles").style.display = "flex";
+            document.getElementById("social").style.display = "none";
+            document.getElementById("articlesButton").style.background = "rgba(255, 255, 255, 0.1)";
+            document.getElementById("articlesButton").style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.25)";
+            document.getElementById("articlesButton").style.backdropFilter = "backdrop-filter: blur(5.4px)";
+            document.getElementById("socialButton").style.background = "none";
+            document.getElementById("socialButton").style.boxShadow = "none";
+            document.getElementById("socialButton").style.backdropFilter = "none";
+        }
+        function selectSocial() {
+            document.getElementById("articles").style.display = "none";
+            document.getElementById("social").style.display = "flex";
+            document.getElementById("articlesButton").style.background = "none";
+            document.getElementById("articlesButton").style.boxShadow = "none";
+            document.getElementById("articlesButton").style.backdropFilter = "none";
+            document.getElementById("socialButton").style.background = "rgba(255, 255, 255, 0.1)";
+            document.getElementById("socialButton").style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.25)";
+            document.getElementById("socialButton").style.backdropFilter = "backdrop-filter: blur(5.4px)";
+        }
     </script>
 </body>
 </html>
