@@ -184,6 +184,7 @@ a:active {
 .alert{
     font-size: small;
     width: 60%;
+    max-width: 400px;
     height: 2em;
     display: none;
     align-items: center;
@@ -196,4 +197,43 @@ a:active {
     position: fixed;
     top: 10px;
     z-index: 2;
+}
+.titleGroup {
+    height: 4em;
+    width: 90%;
+    max-width: 670px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    overflow: hidden;
+}
+.titleGroup h2 {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    margin: 0.5em;
+}
+.titleGroup h2:first-of-type {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    overflow: hidden;
+}
+#social {
+    display: none;
+}
+.space {
+    width: 100%;
+    height: 6em;
 }
