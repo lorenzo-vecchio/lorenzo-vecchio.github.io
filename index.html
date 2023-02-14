@@ -112,7 +112,7 @@
 
 
     <div class="linkGroup" id="social">
-        <a class="linkCard" href="https://www.linkedin.com/in/lorenzo-giovanni-vecchio">
+        <a class="linkCard" href="https://www.linkedin.com/in/lorenzo-giovanni-vecchio-52b259240">
             <div class="linkItem">
                 <div class="linkImg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
@@ -200,19 +200,22 @@
                 line.animate({
                     top: this_nav.position().top,
                     left: this_nav.position().left,
-                    width: this_nav.width()
+                    width: this_nav.width(),
                 });
             });
 
             // on load
-            var active_width = active.width();
-            var active_top = active.position().top;
-            var active_left = active.position().left;
-            line.css({
-                width: active_width,
-                top: active_top,
-                left: active_left
+            window.onload = function() {
+                var active_width = active.width();
+                var active_top = active.position().top;
+                var active_left = active.position().left;
+                line.css({
+                    width: active_width,
+                    top: active_top,
+                    left: active_left
             })
+            }
+            
         });
     </script>
 </body>
