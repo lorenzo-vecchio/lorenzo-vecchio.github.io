@@ -48,6 +48,7 @@
     
     
     <div class="linkGroup" id="articles">
+        <div id="loading"></div>
     </div>
 
 
@@ -157,11 +158,23 @@
                     width: active_width,
                     top: active_top,
                     left: active_left
-            })
+                })
+                displayLoading();
             }
             
+            
+            
         });
-
+        // function for loading display and hide
+        function displayLoading() {
+            const loader = document.getElementById("loading");
+            loader.classList.add("display");
+        }
+        function hideLoading () {
+            const loader = document.getElementById("loading");
+            loader.classList.remove("display");
+            loader.style.display = "none";
+        }
 
         // Medium
         var myHeaders = new Headers();
@@ -194,6 +207,7 @@
                 div.append(div2,h3);
                 a.append(div)
                 test.append(a);
+                hideLoading();
             });
         })
         .catch(error => console.log('error', error));
