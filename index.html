@@ -38,10 +38,10 @@
         </button>
     </div>
     <nav>
-        
         <div class="titleGroup">
-            <h2 onclick="selectArticles()" id="articlesButton" class="active">Articles</h2>
-            <h2 onclick="selectSocial()" id="socialButton">Social</h2>
+            <h2 onclick="selectArticles()" class="active">Articles</h2>
+            <h2 onclick="selectSocial()">Social</h2>
+            <h2 onclick="selectMe()">me</h2>
         </div>
         <div class="slider" id="slider"></div>
     </nav>
@@ -94,6 +94,18 @@
             </div>
         </a>
     </div>
+    <div class="linkGroup" id="me">
+        <h2>
+            about :
+        </h2>
+        <p>
+            I’m in the most important and formative part of my life, studying Software Architecture to become a full stack developer, I am a book geek and I love tech. I have ADHD but I’m making it one of my strengths by using it to hyper-focus in projects, even though it’s still something I’m working on. I’m pretty outgoing (recent thing) and I’m good at team projects. Always searching for new ways to grow my skills and I love to work with people who more experience than me but I’m pretty good at working solo too, always love a challenge!
+        </p>
+    </div>
+
+
+
+
     <div class="space"></div>
 
     <div id="test">
@@ -121,12 +133,18 @@
         function selectArticles() {
             document.getElementById("articles").style.display = "flex";
             document.getElementById("social").style.display = "none";
-            
+            document.getElementById("me").style.display = "none";
         }
         function selectSocial() {
             document.getElementById("articles").style.display = "none";
             document.getElementById("social").style.display = "flex";
+            document.getElementById("me").style.display = "none";
             
+        }
+        function selectMe() {
+            document.getElementById("articles").style.display = "none";
+            document.getElementById("social").style.display = "none";
+            document.getElementById("me").style.display = "flex";
         }
     </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
