@@ -73,6 +73,21 @@ h2 {
     text-transform: uppercase;
     
 }
+#me h2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: justify;
+}
 #profileImage {
     margin-top: 3em;
     width: 29%;
@@ -97,6 +112,7 @@ svg {
     width: 2em;
     height: 2em;
 }
+
 .linkGroup {
     width: 90%;
     max-width: 670px;
@@ -220,6 +236,9 @@ a:active {
     z-index: 1000;
 }
 #social {
+    display: none;
+}
+#me {
     display: none;
 }
 .slider {
