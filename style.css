@@ -246,6 +246,16 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 5px;
+    z-index: 9000;
+}
+.sticked-nav .titleGroup{
+    width: 50%;
+    border-radius: 50px;
+}
+.sticked-nav .slider {
+    border-radius: 50px;
 }
 #loading {
     width: 2rem;

@@ -37,7 +37,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
         </button>
     </div>
-    <nav>
+    <nav class="nav">
         
         <div class="titleGroup">
             <h2 onclick="selectArticles()" id="articlesButton" class="active">Articles</h2>
@@ -131,6 +131,35 @@
     </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
+        const nav = document.querySelector('.nav');
+        const navTop = nav.getBoundingClientRect().top + window.scrollY;
+        const stickedNavClass = 'sticked-nav';
+        
+        const intersectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              nav.classList.add(stickedNavClass);
+            } else {
+              nav.classList.remove(stickedNavClass);
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: `-${nav.offsetHeight}px 0px 0px 0px`,
+          threshold: 0
+        });
+        
+        window.addEventListener('scroll', () => {
+          if (window.scrollY >= navTop - 5) {
+            intersectionObserver.observe(nav);
+          } else {
+            intersectionObserver.unobserve(nav);
+            nav.classList.remove(stickedNavClass);
+          }
+        });
+        
+  
+
 
         $( document ).ready(function() {
             var nav = $(".titleGroup");
