@@ -25,6 +25,7 @@
     </div>
     <h1 class="alert" id="linkCopied">Link Copied!</h1>
     <h1 class="alert" id="linkNotCopied">A problem occurred, link not copied!</h1>
+    <h1 class="alert" id="formSubmitted">Form Successfully Submitted!</h1>
     <div class="name">
         <img src="media/profile.jpg" alt="profile image" id="profileImage">
         <h1>Lorenzo Vecchio</h1>
@@ -45,6 +46,17 @@
         </div>
         <div class="slider" id="slider"></div>
     </nav>
+    
+    <div class="contact">
+        <div class="contact-icon" id="contact_close_button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
+        <form method="POST" action="https://script.google.com/macros/s/AKfycby4HBnbJvlnPWwPvimy6UWfZmnk7SgBe6Fa_tECFgd_H_bm2TRRhz870U7ZHnhhGiyRNg/exec" class="contact-form" id="my-form">
+            <input name="Email" type="email" placeholder="Email" required>
+            <input name="Name" type="text" placeholder="Name" required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
     
     
     <div class="linkGroup" id="articles">
@@ -189,12 +201,10 @@
                     left: active_left
                 })
                 displayLoading();
-            }
-            
-            
-            
+                $('.contact-form').hide();
+            }   
         });
-        // function for loading display and hide
+        // function for loading, display and hide
         function displayLoading() {
             const loader = document.getElementById("loading");
             loader.classList.add("display");
@@ -217,7 +227,7 @@
 
 
 
-        fetch("https://v1.nocodeapi.com/lorenzo_vecchio/medium/FUPLyWCLoTqOEvwh", requestOptions)
+        fetch("https://v1.nocodeapi.com/lorenzo_vecchio/medium/FUPLyWCLoTqOEvwh&&&&&", requestOptions)
         .then(response => response.json())
         .then(result => {
             const test = document.getElementById("articles");
@@ -240,7 +250,46 @@
             });
         })
         .catch(error => console.log('error', error));
-        
+
+        $(document).ready(function(){
+            // Add a click event listener to the contact icon
+            $('.contact-icon').click(function(){
+              // Check if the contact form is already expanded
+              if($('.contact').hasClass('expanded')){
+                // If it is, shrink it back to default size
+                $('.contact').animate({ width: '52px', height: '52px' }, 500).removeClass('expanded');
+                $('.contact-form').hide();
+              } else {
+                // If it's not, expand it to 90% width and 90% height
+                $('.contact').animate({ width: '90%', height: '90%' }, 500).addClass('expanded');
+                $('.contact-form').show();
+              }
+            });
+            
+            window.addEventListener("load", function() {
+                const form = document.getElementById('my-form');
+                form.addEventListener("submit", function(e) {
+                  e.preventDefault();
+                  const data = new FormData(form);
+                  const action = e.target.action;
+                  fetch(action, {
+                    method: 'POST',
+                    body: data,
+                  })
+                  .then(() => {
+                    document.getElementById("formSubmitted").style.display = "flex";
+                    setTimeout(function()
+                    {
+                        document.getElementById("formSubmitted").style.display = "none";
+                    }, 2000);
+                    form.reset();
+                  })
+                });
+              });
+              
+
+          });
+          
     </script>
 </body>
 </html>
