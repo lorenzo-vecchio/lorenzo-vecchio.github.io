@@ -304,7 +304,7 @@ nav {
     flex-direction: column;
     align-content: center;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
     bottom: 2em;
     right: 2em;
     width: 52px;
